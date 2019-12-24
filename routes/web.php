@@ -27,8 +27,10 @@ Route::get("/registration", "viewsController@registration");
 
 Route::get("/cart", "viewsController@cart");
 
+//RegisterController
 Route::post("/registration", "registerController@register");
 
+//LoginController
 Route::post("/login", "loginController@login");
 
 
