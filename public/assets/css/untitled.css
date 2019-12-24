@@ -1,0 +1,33 @@
+.fa.fa-shopping-cart {
+  font-size: 35px;
+  color: rgb(34,142,251);
+}
+
+#contacto {
+  margin-right: 425px;
+}
+
+#title-index {
+  font-size: 72px;
+}
+
+#subtitle-index {
+  font-size: 27px;
+}
+
+#logo {
+  width: 50px;
+}
+
+#contact-form {
+  margin-top: 145px;
+}
+
+#login-form {
+  margin-top: 70px;
+}
+
+#payment-form {
+  margin-top: 70px;
+}
+
