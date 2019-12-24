@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -23,8 +26,18 @@
                 <li class="nav-item" role="presentation"><a class="nav-link active" href="/">Home</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="/catalog">Catalog</a></li>
                 <li class="nav-item" role="presentation" id="contacto" style="margin-right: 425px;"><a class="nav-link" href="/contact">Contact Us</a></li>
+                <?php
+                if(isset($_SESSION["user"])){
+                    echo "<li class='nav-item' role='presentation'><a class='nav-link' href='/logout'>Logout</a></li>";
+                }else{
+
+                ?>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="/login">Login</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="/registration">Register</a></li>
+                <?php
+                }
+                ?>
             </ul>
         </div><a href="/cart"><i class="fa fa-shopping-cart"></i></a></div>
 </nav>
+

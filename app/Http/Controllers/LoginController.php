@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     public function login(Request $request){
-
+        session_start();
         $this->validate(request(), [
             'email' => 'required',
             'password' => 'required'
@@ -17,9 +17,16 @@ class LoginController extends Controller
             ->where("password", $request->password)
             ->first();
         if($user != null){
-            $_SESSION["email"] = $user->email;
+            $_SESSION["user"] = $user->email;
             return redirect()->to("/");
+        }else{
+            return redirect()->to("/login");
         }
+    }
 
+    public function logout(){
+        session_start();
+        session_unset();
+        return redirect()->to("/");
     }
 }

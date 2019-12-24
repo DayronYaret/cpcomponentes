@@ -33,5 +33,7 @@ Route::post("/registration", "registerController@register");
 //LoginController
 Route::post("/login", "loginController@login");
 
+Route::get("/logout", "loginController@logout");
+
 
 
