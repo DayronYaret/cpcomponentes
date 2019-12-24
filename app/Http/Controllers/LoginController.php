@@ -2,24 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use http\Client\Curl\User;
+use App\User;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    public function login(){
+    public function login(Request $request){
+
         $this->validate(request(), [
             'email' => 'required',
             'password' => 'required'
         ]);
-        session_start();
-
-        $user = User::where("email", 'mesa@gmail.com')
-            ->where("password", 'ventana123')
+        $user = User::where("email", $request->email)
+            ->where("password", $request->password)
             ->first();
-        $_SESSION["user"] = $user->email;
-        if(isset($_SESSION["user"])){
-            return view("/");
+        if($user != null){
+            $_SESSION["email"] = $user->email;
+            return redirect()->to("/");
         }
+
     }
 }
