@@ -38,5 +38,8 @@ class ViewsController extends Controller
         return view("shopping-cart");
     }
 
+    public function admin(){
+        return view("admin");
+    }
 
 }

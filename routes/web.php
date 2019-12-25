@@ -27,6 +27,8 @@ Route::get("/registration", "viewsController@registration");
 
 Route::get("/cart", "viewsController@cart");
 
+Route::get("/admin", "viewsController@admin");
+
 //RegisterController
 Route::post("/registration", "registerController@register");
 
@@ -34,6 +36,15 @@ Route::post("/registration", "registerController@register");
 Route::post("/login", "loginController@login");
 
 Route::get("/logout", "loginController@logout");
+
+//AdminController
+Route::get("/products","adminController@showProduct");
+
+Route::get("/add-product", "adminController@add");
+
+Route::get("/transactions", "adminController@showTransactions");
+
+Route::get("/orders", "adminController@showOrders");
 
 
 
