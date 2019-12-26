@@ -28,7 +28,11 @@ session_start();
                 <li class="nav-item" role="presentation"><a class="nav-link" href="/catalog">Catalog</a></li>
                 <li class="nav-item" role="presentation" id="contacto" style="margin-right: 425px;"><a class="nav-link" href="/contact">Contact Us</a></li>
                 <?php
+
                 if(isset($_SESSION["user"])){
+                    if($_SESSION["user"]=="admin@admin.admin"){
+                        echo "<li class='nav-item' role='presentation'><a class='nav-link' href='/admin'>Admin</a></li>";
+                    }
                     echo "<li class='nav-item' role='presentation'><a class='nav-link' href='/logout'>Logout</a></li>";
                 }else{
 
@@ -37,6 +41,7 @@ session_start();
                 <li class="nav-item" role="presentation"><a class="nav-link" href="/registration">Register</a></li>
                 <?php
                 }
+
                 ?>
             </ul>
         </div>

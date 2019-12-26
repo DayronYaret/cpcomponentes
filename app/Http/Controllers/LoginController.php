@@ -14,6 +14,7 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
         if($request->email == "admin@admin.admin" && $request->password == "admin"){
+            $_SESSION["user"]= "admin@admin.admin";
             return redirect()->to("/admin");
         }else {
             $user = User::where("email", $request->email)

@@ -46,5 +46,7 @@ Route::get("/transactions", "adminController@showTransactions");
 
 Route::get("/orders", "adminController@showOrders");
 
+Route::post("/newProduct" ,"adminController@newProduct");
+
 
 
