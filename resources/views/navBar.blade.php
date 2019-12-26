@@ -19,7 +19,8 @@ session_start();
 
 <body style="background-color: rgb(246,246,246)">
 <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-    <div class="container"><a class="navbar-brand logo" href="/"><img id="logo" src="assets/img/logo2.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <div class="container"><a class="navbar-brand logo" href="/"><img id="logo" src="assets/img/logo2.png"></a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div
             class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav ml-auto">
@@ -38,6 +39,8 @@ session_start();
                 }
                 ?>
             </ul>
-        </div><a href="/cart"><i class="fa fa-shopping-cart"></i></a></div>
+        </div>
+        <a href="/cart"><i class="fa fa-shopping-cart"></i></a>
+    </div>
 </nav>
 

@@ -1,3 +1,1 @@
-<?php
-    echo "ordenes";
-    ?>
+@extends('navBar')

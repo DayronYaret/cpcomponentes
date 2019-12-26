@@ -1,5 +1,5 @@
 @extends("navBar")
-    <main class="page contact-us-page" style="background-color: rgb(246,246,246);margin-top: 10%">
+    <main class="page contact-us-page NoScroll" style="background-color: rgb(246,246,246);">
         <section class="clean-block clean-form dark">
             <div class="container">
                 <form id="contact-form">

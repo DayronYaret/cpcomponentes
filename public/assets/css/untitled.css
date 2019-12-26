@@ -30,4 +30,8 @@
 #payment-form {
   margin-top: 70px;
 }
-
+.NoScroll{
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+}

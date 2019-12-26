@@ -1,5 +1,5 @@
 @extends("navBar")
-    <main class="page registration-page" style="background-color: rgb(246,246,246);margin-top: 10%">
+    <main class="page registration-page NoScroll" style="background-color: rgb(246,246,246);margin-top: 5%">
         <section class="clean-block clean-form dark" style="background-color: transparent;">
             <div class="container" id="register-form" style="margin-top: 84px;">
                 <form method="post" action="/registration">
