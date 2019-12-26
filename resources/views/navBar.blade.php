@@ -24,21 +24,21 @@ session_start();
         <div
             class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item" role="presentation"><a class="nav-link active" href="/">Home</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="/catalog">Catalog</a></li>
-                <li class="nav-item" role="presentation" id="contacto" style="margin-right: 425px;"><a class="nav-link" href="/contact">Contact Us</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link active" href="/">Principal</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="/catalog">Catalogo</a></li>
+                <li class="nav-item" role="presentation" id="contacto" style="margin-right: 300px;"><a class="nav-link" href="/contact">Sugerencias</a></li>
                 <?php
 
                 if(isset($_SESSION["user"])){
                     if($_SESSION["user"]=="admin@admin.admin"){
                         echo "<li class='nav-item' role='presentation'><a class='nav-link' href='/admin'>Admin</a></li>";
                     }
-                    echo "<li class='nav-item' role='presentation'><a class='nav-link' href='/logout'>Logout</a></li>";
+                    echo "<li class='nav-item' role='presentation'><a class='nav-link' href='/logout'>Cerrar sesion</a></li>";
                 }else{
 
                 ?>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="/login">Login</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="/registration">Register</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="/login">Iniciar sesion</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="/registration">Registrarse</a></li>
                 <?php
                 }
 

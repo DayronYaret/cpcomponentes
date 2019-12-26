@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Products;
+use App\Suggestion;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -39,6 +40,12 @@ class AdminController extends Controller
         Products::create(request(['name','description','price','stock', 'imageUrl', 'imageUrl2', 'imageUrl3',"processor","RAM","graphic","motherboard"]));
 
         return redirect()-> to('/admin');
+    }
+
+    public function showSuggestion(){
+        $suggestions = Suggestion::all();
+        return view("suggestions")
+            ->with("suggestions", $suggestions);
     }
 
 }

@@ -38,7 +38,7 @@ Route::post("/login", "loginController@login");
 Route::get("/logout", "loginController@logout");
 
 //AdminController
-//Route::get("/products","adminController@showProduct");
+Route::get("/products","adminController@showProduct");
 
 Route::get("/add-product", "adminController@add");
 
@@ -48,8 +48,13 @@ Route::get("/orders", "adminController@showOrders");
 
 Route::post("/newProduct" ,"adminController@newProduct");
 
+Route::get("/suggestion", "adminController@showSuggestion");
 //ProductController
 
 Route::get('/catalog', "productController@getProducts");
 
 Route::get('/product', "productController@showProduct");
+
+//SuggestionController
+
+Route::post('/suggestion', 'suggestionController@addSuggestion');
