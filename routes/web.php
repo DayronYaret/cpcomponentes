@@ -15,7 +15,7 @@ Route::get('/', 'viewsController@index');
 
 Route::get("/login", "viewsController@login");
 
-Route::get("/catalog", "viewsController@catalog");
+//Route::get("/catalog", "viewsController@catalog");
 
 Route::get("/contact", "viewsController@contact");
 
@@ -38,7 +38,7 @@ Route::post("/login", "loginController@login");
 Route::get("/logout", "loginController@logout");
 
 //AdminController
-Route::get("/products","adminController@showProduct");
+//Route::get("/products","adminController@showProduct");
 
 Route::get("/add-product", "adminController@add");
 
@@ -48,5 +48,8 @@ Route::get("/orders", "adminController@showOrders");
 
 Route::post("/newProduct" ,"adminController@newProduct");
 
+//ProductController
 
+Route::get('/catalog', "productController@getProducts");
 
+Route::get('/product', "productController@showProduct");

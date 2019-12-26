@@ -27,10 +27,18 @@ class AdminController extends Controller
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'stock' => 'required'
+            'stock' => 'required',
+            'imageUrl' => 'required',
+            'imageUrl2' => 'required',
+            'imageUrl3' => 'required',
+            'processor' => 'required',
+            'RAM' => 'required',
+            'graphic' => 'required',
+            'motherboard' => 'required',
         ]);
-        Products::create(request(['name','description','price','stock']));
+        Products::create(request(['name','description','price','stock', 'imageUrl', 'imageUrl2', 'imageUrl3',"processor","RAM","graphic","motherboard"]));
 
         return redirect()-> to('/admin');
     }
+
 }
