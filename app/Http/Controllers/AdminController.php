@@ -61,5 +61,40 @@ class AdminController extends Controller
         return view('products')
             ->with('products', $products);
     }
+    public function editProduct(Request $request){
+
+        $product = Products::get()
+            ->where('id',$request->id)
+            ->first();
+        return view('editProduct')
+            ->with('product',$product);
+    }
+    public function updateProduct(Request $request){
+        $product = Products::where("id",$request->id)
+            ->first();
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->price = $request->price;
+        $product->stock = $request->stock;
+        $product->processor = $request->processor;
+        $product->graphic = $request->graphic;
+        $product->RAM = $request->RAM;
+        $product->motherboard = $request->motherboard;
+        $product->imageUrl = $request->imageUrl;
+        $product->imageUrl2 = $request->imageUrl2;
+        $product->imageUrl3 = $request->imageUrl3;
+        $product->save();
+
+        return  redirect()->to("/productsAdmin");
+
+    }
+
+    public function deleteProduct($id){
+        $product = Products::where("id", $id)
+            ->first();
+        $product->delete();
+        return redirect()->to("/productsAdmin");
+    }
+
 
 }

@@ -15,7 +15,7 @@
             <p>Correo del usuario:<b><?php echo $suggestion->email; ?></b> </p>
             <p>Tema de la sugerencia: <b><?php echo $suggestion->subject; ?></b> </p>
             <p>Sugerencia: <b><?php echo $suggestion->subject; ?></b> </p>
-            <a href="/suggestion/<?php echo $suggestion->id ?>"><button>Eliminar sugerencia</button></a>
+            <a href="/suggestion/<?php echo $suggestion->id ?>"><button class="btn btn-danger   ">Eliminar sugerencia</button></a>
         </article>
         <?php }?>
     </div>

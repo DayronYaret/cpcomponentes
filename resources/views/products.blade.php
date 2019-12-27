@@ -23,8 +23,14 @@
             <p>Tarjeta gráfica: <b><?php echo $product->graphic; ?></b> </p>
             <p>Placa base: <b><?php echo $product->motherboard; ?></b> </p>
             <p>Descripción del producto: <b><?php echo $product->description; ?></b> </p>
-            <a href="#"><button class="btn btn-danger">Eliminar producto</button></a>
-            <a href="#"><button class="btn btn-info">Editar</button></a>
+            <form action="/editProduct" style="display:inline;">
+                <input type="hidden" name="id" value="<?php echo $product->id?>">
+                <button class="btn btn-info" type="submit">Editar</button>
+            </form>
+            <form action="/productsAdmin/<?php echo $product->id?>" style="display:inline;">
+                <button class="btn btn-danger" type="submit">Eliminar producto</button>
+            </form>
+
 
         </article>
         <?php }?>

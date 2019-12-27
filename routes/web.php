@@ -51,6 +51,15 @@ Route::post("/newProduct" ,"adminController@newProduct");
 Route::get("/suggestion", "adminController@showSuggestion");
 
 Route::get("/productsAdmin", "adminController@getProductsAdmin");
+
+Route::get("/editProduct", "adminController@editProduct");
+
+Route::post("/updateProduct", "adminController@updateProduct");
+
+Route::get("/productsAdmin/{id}", "adminController@deleteProduct");
+
+Route::get('/suggestion/{id}', 'adminController@deleteSuggestion');
+
 //ProductController
 
 Route::get('/catalog', "productController@getProducts");
@@ -61,4 +70,4 @@ Route::get('/product', "productController@showProduct");
 
 Route::post('/suggestion', 'suggestionController@addSuggestion');
 
-Route::get('/suggestion/{id}', 'adminController@deleteSuggestion');
+
