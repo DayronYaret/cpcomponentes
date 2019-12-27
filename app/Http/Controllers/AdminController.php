@@ -54,4 +54,12 @@ class AdminController extends Controller
         return redirect()->to("/suggestion");
     }
 
+    public  function getProductsAdmin(){
+        $products = Products::all();
+        //dd($products);
+
+        return view('products')
+            ->with('products', $products);
+    }
+
 }

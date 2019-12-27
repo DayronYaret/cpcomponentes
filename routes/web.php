@@ -49,6 +49,8 @@ Route::get("/orders", "adminController@showOrders");
 Route::post("/newProduct" ,"adminController@newProduct");
 
 Route::get("/suggestion", "adminController@showSuggestion");
+
+Route::get("/productsAdmin", "adminController@getProductsAdmin");
 //ProductController
 
 Route::get('/catalog', "productController@getProducts");
