@@ -81,9 +81,6 @@
     <footer class="page-footer dark">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <div class="clean-block add-on sponsors"><a href="#"><img src="assets/img/logos/shopify.png"></a><a href="#"><img src="assets/img/logos/instacart.png"></a><a href="#"><img src="assets/img/logos/kickstarter.png"></a><a href="#"><img src="assets/img/logos/pinterest.png"></a></div>
-                </div>
                 <div class="col-sm-3 offset-xl-4">
                     <h5>Get started</h5>
                     <ul>

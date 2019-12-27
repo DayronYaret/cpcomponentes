@@ -47,5 +47,11 @@ class AdminController extends Controller
         return view("suggestions")
             ->with("suggestions", $suggestions);
     }
+    public function deleteSuggestion($id){
+        $suggestion = Suggestion::where("id", $id)
+            ->first();
+        $suggestion->delete();
+        return redirect()->to("/suggestion");
+    }
 
 }

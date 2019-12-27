@@ -17,4 +17,5 @@ class SuggestionController extends Controller
         Suggestion::create(request(['name', 'subject', 'email', 'message']));
         return redirect()->to("/");
     }
+
 }

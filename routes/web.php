@@ -58,3 +58,5 @@ Route::get('/product', "productController@showProduct");
 //SuggestionController
 
 Route::post('/suggestion', 'suggestionController@addSuggestion');
+
+Route::get('/suggestion/{id}', 'adminController@deleteSuggestion');
