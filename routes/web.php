@@ -66,6 +66,8 @@ Route::get('/catalog', "productController@getProducts");
 
 Route::get('/product', "productController@showProduct");
 
+Route::get("getLatestProducts", "productController@getLatestProducts");
+
 //SuggestionController
 
 Route::post('/suggestion', 'suggestionController@addSuggestion');

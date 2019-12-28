@@ -1,3 +1,14 @@
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        function getLatestProducts() {
+            $("#latestProducts").load("/getLatestProducts");
+            setTimeout(getLatestProducts, 1000);
+        };
+        getLatestProducts();
+    </script>
+</head>
+
 @extends("navBar")
     <main class="page landing-page">
         <section class="clean-block clean-hero" style="background-image: url(&quot;assets/img/tech/image4.jpg&quot;);color: rgba(9,162,255,0.58);margin-top: 5%">
@@ -10,42 +21,7 @@
                 <div class="block-heading">
                     <h2 class="text-info">Últimos lanzamientos</h2>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="row no-gutters">
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="border rounded clean-product-item">
-                                <div class="image"><a href="/product"><img class="img-fluid d-block mx-auto" src="assets/img/tech/image2.jpg"></a></div>
-                                <div class="product-name"><a href="/product">Lorem ipsum dolor sit amet</a></div>
-                                <div class="about">
-                                    <div class="price">
-                                        <h3>$100</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="border rounded-0 clean-product-item">
-                                <div class="image"><a href="#"><img class="img-fluid d-block mx-auto" src="assets/img/tech/image2.jpg"></a></div>
-                                <div class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></div>
-                                <div class="about">
-                                    <div class="price">
-                                        <h3>$100</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="border rounded-0 clean-product-item">
-                                <div class="image"><a href="#"><img class="img-fluid d-block mx-auto" src="assets/img/tech/image2.jpg"></a></div>
-                                <div class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></div>
-                                <div class="about">
-                                    <div class="price">
-                                        <h3>$100</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div id="latestProducts">
                 </div>
             </div>
         </section>
