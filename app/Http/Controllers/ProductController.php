@@ -47,6 +47,7 @@ class ProductController extends Controller
                             '</div>'.
                         '</div>';
                 }
+                //hola
                 $output .= '</div>';
                 return Response($output);
             }
