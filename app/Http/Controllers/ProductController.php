@@ -46,6 +46,7 @@ class ProductController extends Controller
                                 '</div>'.
                             '</div>'.
                         '</div>';
+
                     /**
                     $output .= '<tr>' .
                         '<td>' . $product->name . '</td>' .
