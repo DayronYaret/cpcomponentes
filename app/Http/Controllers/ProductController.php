@@ -46,21 +46,6 @@ class ProductController extends Controller
                                 '</div>'.
                             '</div>'.
                         '</div>';
-
-                    /**
-                    $output .= '<tr>' .
-                        '<td>' . $product->name . '</td>' .
-                        '<td>' . $product->description . '</td>' .
-                        '<td>' . $product->price . '</td>' .
-                        '<td>' . $product->stock . '</td>' .
-                        '<td>' . $product->processor . '</td>' .
-                        '<td>' . $product->graphic . '</td>' .
-                        '<td>' . $product->RAM . '</td>' .
-                        '<td>' . $product->motherboard . '</td>' .
-                        "<td><img src='$product->imageUrl'></td>" .
-                        "<td><button>Ver producto</button></td>".
-                        '</tr>';
-                     **/
                 }
                 $output .= '</div>';
                 return Response($output);
