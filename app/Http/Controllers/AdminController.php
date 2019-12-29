@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use App\Products;
+use App\Suborder;
 use App\Suggestion;
 use Illuminate\Http\Request;
 
@@ -20,9 +22,6 @@ class AdminController extends Controller
         return view("transactions");
     }
 
-    public function showOrders(){
-        return view("orders");
-    }
     public function newProduct(){
         $this->validate(request(), [
             'name' => 'required',
@@ -95,6 +94,12 @@ class AdminController extends Controller
         $product->delete();
         return redirect()->to("/productsAdmin");
     }
+    public  function getOrders(){
+        $orders = Suborder::all();
+        //dd($products);
 
+        return view('orders')
+            ->with('orders', $orders);
+    }
 
 }
