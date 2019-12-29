@@ -73,3 +73,17 @@ Route::get("getLatestProducts", "productController@getLatestProducts");
 Route::post('/suggestion', 'suggestionController@addSuggestion');
 
 
+//PaypalController
+# The home route, which is used in the authentication scaffolding
+# We update the closure argument to the index function of our controller
+# Adding a product to the shopping cart
+Route::get('/add/{product}', 'WebstoreController@addToCart')->name('add');
+# Removing an product from the shopping cart
+Route::get('/remove/{productId}', 'WebstoreController@removeProductFromCart')->name('remove');
+# Clearing all products from the shopping cart
+Route::get('/empty', 'WebstoreController@destroyCart')->name('empty');
+# PayPal checkout
+Route::get('checkout', 'PaypalController@payWithpaypal')->name('checkout');
+# PayPal status callback
+Route::get('status', 'PaypalController@getPaymentStatus');
+

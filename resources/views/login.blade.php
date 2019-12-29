@@ -1,6 +1,6 @@
-@extends("navBar")
+@include("navBar")
 
-    <main class="page login-page NoScroll" style="background-color: rgb(246,246,246); margin-top: 5%">
+<main class="page login-page " style="background-color: rgb(246,246,246); ">
         <section class="clean-block clean-form dark">
             <div class="container">
                 <form id="login-form" method="post" action="/login">

@@ -1,6 +1,6 @@
-@extends("navBar")
+@include("navBar")
 
-<section id="registro" style="margin: 12%">
+<section id="registro" style="margin: 3%;" >
     <form id="formularioRegistro" action="/newProduct" method="POST">
         @csrf
         <p class="rellenoFormulario"><label>Nombre:</label><input class="form-control" type="text" name="name" id="productName" required></p>

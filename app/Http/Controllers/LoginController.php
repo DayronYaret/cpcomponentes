@@ -15,6 +15,7 @@ class LoginController extends Controller
         ]);
         if($request->email == "admin@admin.admin" && $request->password == "admin"){
             $_SESSION["user"]= "admin@admin.admin";
+
             return redirect()->to("/admin");
         }else {
             $user = User::where("email", $request->email)
@@ -22,6 +23,7 @@ class LoginController extends Controller
                 ->first();
             if ($user != null) {
                 $_SESSION["user"] = $user->email;
+                auth()->login($user);
                 return redirect()->to("/");
             } else {
                 return redirect()->to("/login");

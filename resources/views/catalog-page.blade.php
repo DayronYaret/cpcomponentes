@@ -1,7 +1,25 @@
-@extends("navBar")
+@include("navBar")
+<div class="container">
+    @if(Session::has('success'))
+        <div class="alert alert-success">
+            {{ Session::get('success') }}
+            @php
+                Session::forget('success');
+            @endphp
+        </div>
+    @endif
 
-    <main class="page catalog-page">
-        <section class="clean-block clean-catalog dark" style="margin-top: 10%;">
+    @if ($errors->any())
+        <div class="alert alert-warning" uk-alert>
+            {{ Session::get('error') }}
+            @php
+                Session::forget('error');
+            @endphp
+        </div>
+    @endif
+</div>
+<main class="page catalog-page">
+        <section class="clean-block clean-catalog dark" >
             <div class="container">
                 <div class="content">
                     <div class="row">
@@ -47,9 +65,6 @@
     </main>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="assets/js/smoothproducts.min.js"></script>
-    <script src="assets/js/theme.js"></script>
 </body>
 
 </html>

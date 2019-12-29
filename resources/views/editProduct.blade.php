@@ -1,5 +1,5 @@
-@extends('navBar')
-<section id="registro" style="margin: 12%">
+@include("navBar")
+<section id="registro">
     <form id="formularioEditar" action="/updateProduct" method="POST">
         @csrf
         <p class="rellenoFormulario"><label>Nombre:</label><input class="form-control" type="text"  name="name" id="name" required value="<?php echo $product->name ?>"></p>

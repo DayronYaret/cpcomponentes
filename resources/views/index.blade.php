@@ -1,3 +1,5 @@
+
+@include("navBar")
 <head>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
@@ -9,9 +11,9 @@
     </script>
 </head>
 
-@extends("navBar")
+
     <main class="page landing-page">
-        <section class="clean-block clean-hero" style="background-image: url(&quot;assets/img/tech/image4.jpg&quot;);color: rgba(9,162,255,0.58);margin-top: 5%">
+        <section class="clean-block clean-hero" style="background-image: url(&quot;assets/img/tech/image4.jpg&quot;);color: rgba(9,162,255,0.58);">
             <div class="text">
                 <h2 id="title-index">CP Componentes</h2>
                 <p id="subtitle-index">Bienvenido a tu tienda electrónica de confianza.</p><a class="btn btn-outline-light btn-lg" role="button" href="/catalog">Ver Productos</a></div>

@@ -1,5 +1,5 @@
-@extends("navBar")
-    <main class="page payment-page" style="background-color: rgb(246,246,246);margin-top: 10%">
+@include("navBar")
+<main class="page payment-page" style="background-color: rgb(246,246,246);">
         <section class="clean-block payment-form dark">
             <div class="container">
                 <form id="payment-form">

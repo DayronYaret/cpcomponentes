@@ -1,6 +1,6 @@
-@extends("navBar")
+@include("navBar")
     <main class="page product-page">
-        <section id="product-container" class="clean-block clean-product dark" style="margin-top: 10%">
+        <section id="product-container" class="clean-block clean-product dark">
             <div class="container">
                 <div class="block-content">
                     <div class="product-info">
@@ -15,7 +15,10 @@
                                     <h3><?php echo $product->name?></h3>
                                     <div class="price">
                                         <h3><?php echo $product->price?>$</h3>
-                                    </div><button class="btn btn-primary" type="button"><i class="icon-basket"></i>Add to Cart</button>
+                                    </div> <a href="{{ route('add', [ $product->getRouteKey() ]) }}">
+                                        <!-- The button for adding the product to the cart -->
+                                        <button class="btn btn-primary">Add to cart</button>
+                                    </a>
                                     <div class="summary">
                                         <p><?php echo $product->description?></p>
                                     </div>

@@ -1,8 +1,8 @@
-@extends("navBar")
+@include("navBar")
 
 </head>
-<body class="NoScroll">
-<section style="margin: 10%">
+<body>
+<section>
     <a href="/productsAdmin"><button class="btn btn-outline-dark btn-block d-block">Ver productos</button></a>
     <a href="/add-product"><button class="btn btn-outline-dark btn-block d-block">Añadir producto</button></a>
     <a href="/transactions"><button class="btn btn-outline-dark btn-block d-block">Ver transacciones</button></a>

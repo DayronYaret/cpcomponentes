@@ -1,2 +1,2 @@
 
-@extends('navBar')
+@include("navBar")

@@ -1,8 +1,8 @@
-@extends('navbar')
+@include("navBar")
 
 
 
-<section id="seccionFrontEndUser" style="margin-top: 7%">
+<section id="seccionFrontEndUser">
     <div id="listadoCanales">
         <header id="cabeceraCanales" >
             <h4>Listado de todas las sugerencias</h4>
