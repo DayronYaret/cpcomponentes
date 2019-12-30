@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Products;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Input;
 use PayPal\Api\Amount;
@@ -156,6 +157,10 @@ class PaypalController extends Controller
                 $suborder->price = $item->price;
                 $suborder->quantity = $item->qty;
                 $suborder->save();
+
+                $product = Products::find($item->id);
+                $product['quantity'] -= $item->qty;
+                $product->save();
             }
             Cart::destroy();
             Session::put('success', 'Your payment was successful. Thank you.');
