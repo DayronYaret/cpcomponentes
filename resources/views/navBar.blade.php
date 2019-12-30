@@ -114,7 +114,9 @@ session_start();
                                     <!-- Clear shopping cart button -->
                                     <a href="{{ route('empty') }}" class="btn btn-danger">Empty</a>
                                     <!-- Proceed to checkout button -->
+                                    @if(isset($_SESSION["user"]))
                                     <a href="{{ route('checkout') }}" class="btn btn-primary">Checkout</a>
+                                    @endif
                                 </div>
                             </div>
                         </div>

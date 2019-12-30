@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Invoice;
 use App\Order;
 use App\Products;
 use App\Suborder;
@@ -95,11 +96,18 @@ class AdminController extends Controller
         return redirect()->to("/productsAdmin");
     }
     public  function getOrders(){
-        $orders = Suborder::all();
+        $orders = Suborder::orderBy("order_id")
+        ->get();
         //dd($products);
 
         return view('orders')
             ->with('orders', $orders);
     }
+    public  function getTransactions(){
+        $invoices = Invoice::all();
+        //dd($products);
 
+        return view('transactions')
+            ->with('invoices', $invoices);
+    }
 }

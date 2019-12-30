@@ -6,7 +6,7 @@
     <div id="listadoCanales">
 
         <header id="cabeceraCanales" >
-            <h4>Listado de todas las sugerencias</h4>
+            <h4>Listado de todos los productos</h4>
         </header>
         <?php
         foreach ($products as $product){

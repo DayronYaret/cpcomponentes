@@ -42,7 +42,7 @@ Route::get("/products","adminController@showProduct");
 
 Route::get("/add-product", "adminController@add");
 
-Route::get("/transactions", "adminController@showTransactions");
+Route::get("/transactions", "adminController@getTransactions");
 
 Route::get("/orders", "adminController@getOrders");
 

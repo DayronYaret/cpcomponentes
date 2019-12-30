@@ -5,7 +5,7 @@
     <script>
         function getLatestProducts() {
             $("#latestProducts").load("/getLatestProducts");
-            setTimeout(getLatestProducts, 1000);
+            setTimeout(getLatestProducts, 5000);
         };
         getLatestProducts();
     </script>

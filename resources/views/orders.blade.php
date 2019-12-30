@@ -14,19 +14,13 @@
     <div class="row">
         <div class="col-md-8">
 
-            <?php
-            if (isset($message) && $message != "") {
-                echo '<div class="alert alert-success"><strong>Success: </strong> ' . $message . '</div>';
-            }
-            ?>
-
             <?php if (count($orders) > 0) {
             foreach ($orders as $order){
             ?>
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        Order @ <?php echo $order['created_at'] ?>
+                        Order @ <?php echo $order['created_at']. "--- Order id:".$order['order_id'] ?>
                     </h3>
                 </div>
                 <div class="panel-body">
@@ -37,22 +31,22 @@
                             <th>Currency</th>
                             <th>Cantidad</th>
                         </tr>
-                        <?php foreach ($order as $item){?>
+
                         <tr>
                             <td>
-                                <?php echo $item['product_id']; ?>
+                                <?php echo $order['product_id']; ?>
                             </td>
                             <td>
-                                <?php echo $item['price']; ?>
+                                <?php echo $order['price']; ?>
                             </td>
                             <td>
                                 <?php echo "USD"; ?>
                             </td>
                             <td>
-                                <?php echo $item['quantity']; ?>
+                                <?php echo $order['quantity']; ?>
                             </td>
                         </tr>
-                        <?php } ?>
+                        <?php  ?>
                     </table>
                 </div>
             </div>
