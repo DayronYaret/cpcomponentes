@@ -159,7 +159,7 @@ class PaypalController extends Controller
                 $suborder->save();
 
                 $product = Products::find($item->id);
-                $product['quantity'] -= $item->qty;
+                $product['stock'] -= $item->qty;
                 $product->save();
             }
             Cart::destroy();
