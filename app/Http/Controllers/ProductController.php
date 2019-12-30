@@ -41,7 +41,10 @@ class ProductController extends Controller
                                 '<div class="product-name"> '.$product->description.
                                     '<div class="price">'.
                                         '<h3>'.$product->price.'$</h3>'.'<br>'.
-                                        '<button class="btn btn-primary" >Ver producto</button>'.
+                                        '  <form action="/product">
+                                                    <input type="hidden" name="id" value="'.$product->id.'">
+                                                    <button class="btn btn-primary" type="submit">Ver producto</button>
+                                                </form>'.
                                     '</div>'.
                                 '</div>'.
                             '</div>'.
